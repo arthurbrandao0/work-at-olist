@@ -1,3 +1,14 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap-theme.min.css">
+
 <html>
-    <p>It works!</p>
+
+<h1>Registered Channels</h1>
+    {% for channel in channels %}
+        <div>
+            <p><strong>{{ channel }}</strong></p>
+            <p>(code {{ channel.channel_id }})</p><hr />
+        </div>
+    {% endfor %}
+<a href="categories">Click here to access categories</a>
 </html>

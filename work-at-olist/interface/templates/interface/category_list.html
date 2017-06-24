@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<html>
+<h1>Registered Categories</h1>
+    {% for category in categories %}
+        <div>
+            <p><strong>{{ category }}</strong></p>
+            <p>(code: {{ category.category_id }})</p>
+            <p>Marketplace: {{ category.channel_id }}</p><hr />
+        </div>
+    {% endfor %}
+<a href="channels">Click here to access channels</a>
+</html>
