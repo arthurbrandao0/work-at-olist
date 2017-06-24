@@ -3,14 +3,16 @@ from datetime import datetime
 import os
 import csv
 import sqlite3
+import os.path
 
-db = sqlite3.connect("E:\GitHub\work-at-olist-v2\work-at-olist\db.sqlite3")
+
+# filepath = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "db.sqlite3"))
+# print(filepath)
 
 
+# db = sqlite3.connect("E:\GitHub\work-at-olist-v2\work-at-olist\db.sqlite3")
+db = sqlite3.connect(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "db.sqlite3")))
 cursor = db.cursor()
-# cursor.execute('''CREATE TABLE IF NOT EXISTS channel(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)''')
-# cursor.execute('''CREATE TABLE IF NOT EXISTS category(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT,
-#                 parent_category TEXT, channel_id INT, FOREIGN KEY(channel_id) REFERENCES channel(id))''')
 
 
 class Command(BaseCommand):
