@@ -1,1 +1,1 @@
-web: gunicorn workatolist.wsgi:application --log-file -
+web: gunicorn workatolist.wsgi  --log-file -
