@@ -3,9 +3,10 @@ from .models import Channel, Category
 
 
 def channel_list(request):
-    channels = Channel.objects.all
+    channels = Channel.objects.order_by('name')
     return render(request, 'interface/channel_list.html', {'channels': channels})
 
+
 def category_list(request):
-    categories = Category.objects.all
+    categories = Category.objects.order_by('name')
     return render(request, 'interface/category_list.html', {'categories': categories})

@@ -8,6 +8,9 @@
         <div>
             <p><strong>{{ channel }}</strong></p>
             <p>(code {{ channel.channel_id }})</p><hr />
+            {% for channel_name in channel.category_set.all %}
+                <p>{{channel_name}}</p><hr />
+            {% endfor %}
         </div>
     {% endfor %}
 <a href="categories">Click here to access categories</a>

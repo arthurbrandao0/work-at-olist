@@ -5,9 +5,8 @@
 <h1>Registered Categories</h1>
     {% for category in categories %}
         <div>
-            <p><strong>{{ category }}</strong></p>
-            <p>(code: {{ category.category_id }})</p>
-            <p>Marketplace: {{ category.channel_id }}</p><hr />
+            <p><strong>{{ category }}</strong> #{{ category.category_id }}</p>
+            <p>Marketplace: {{ category.channel.name }} #{{ category.channel_id }}</p><hr />
         </div>
     {% endfor %}
 <a href="channels">Click here to access channels</a>

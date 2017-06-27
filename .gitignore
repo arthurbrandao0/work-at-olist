@@ -9,6 +9,7 @@
 tmp
 *.pyc
 __pycache__
+migrations
 myvenv
 db.sqlite3
 static/
