@@ -12,7 +12,7 @@ class Channel(models.Model):
 class Category(models.Model):
     category_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200)
-    parent_category_id = models.IntegerField(null=True)
+    parent_category_id = models.ForeignKey('self', null=True, blank=True)
     channel = models.ForeignKey(Channel)
 
     def __str__(self):
